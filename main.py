@@ -7,12 +7,15 @@ CYELLOW = "\33[33m"
 CBLUE = "\33[34m"
 
 BRIEF_RULES = """
-Your guess must be a sequence of 5 unique digits. The sequence can start with 0 btw. 
+Your guess must be a sequence of 4 unique digits. The sequence can start with 0. 
 If you guess the digit and its position -- it's a bull. 
 If only the digit, but not the position is correct -- it's a cow. 
 Note that what is counted as a bull does not increment the cow count.  
 
 """
+
+MAX_STEPS = 10
+SEQUENCE_LENGTH = 4
 
 
 def random_combination(iterable, r):
@@ -50,17 +53,24 @@ def is_valid_guess(guess, length):
 def start_game(length):
     number = create_number(length)
     print(f"{CBLUE}{BRIEF_RULES}")
+    step = 0
     while True:
+        if step == MAX_STEPS:
+            print(
+                f"{CRED}You did not make it in {MAX_STEPS} steps. The number was {number}"
+            )
+            break
         guess = input(f"{CVIOLET}Enter your guess. \n")
         if not is_valid_guess(guess, length):
-            print(f"{CRED}Your guess violates the rules!")
+            print(f"{CRED}Your guess violates the rules!\n")
             continue
+        step += 1
         bulls, cows = check_guess(number, guess)
         if bulls == length:
-            print(f"{CGREEN}You won!")
+            print(f"{CGREEN}You won at step {step}!")
             break
-        print(f"{CYELLOW} You've got {bulls} bulls and {cows} cows")
+        print(f"{CYELLOW}You've got {bulls} bulls and {cows} cows at step {step}\n")
 
 
 if __name__ == "__main__":
-    start_game(5)
+    start_game(SEQUENCE_LENGTH)
