@@ -23,7 +23,7 @@ def random_combination(iterable, r):
 
 
 def create_number(length):
-    digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    digits = list(range(10))
     random_item = random_combination(digits, length)
     return "".join(str(item) for item in random_item)
 
