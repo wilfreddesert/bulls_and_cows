@@ -8,8 +8,9 @@ The rules are very straightforward:
 * Each round your guess is checked against the true number that was generated randomly
 * If you guess both the digits and its position, this is counted as a bull
 * If the digit is in the correct number, but the position is different, it is a cow
-**Example**: if the true number is 9543
-Your guess is 9532: so you have 2 bulls (9 and 5 are at correct positions) and 1 cow (there is a "3", but at a different index). 
+
+**Example**
+If the true number is 9543 and your guess is 9532, you have got 2 bulls (9 and 5 are at correct positions) and 1 cow (there is a "3", but at a different index). 
 
 * Note that what is counted as a bull does not increment the cow counter
 * You need to be clever to guess the number in **10** steps
