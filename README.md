@@ -4,9 +4,13 @@ For those of you who loved Wordle, but are better with digits than with letters,
 
 The rules are very straightforward:
 
-* You need to guess a number (technically speaking, it can start with 0 so it might not be a number) that consists of 5 unique digits
+* You are supposed to guess a number (technically speaking, it can start with 0 so it might not be a number) that consists of 4 unique digits
 * Each round your guess is checked against the true number that was generated randomly
 * If you guess both the digits and its position, this is counted as a bull
 * If the digit is in the correct number, but the position is different, it is a cow
+**Example**: if the true number is 9543
+Your guess is 9532: so you have 2 bulls (9 and 5 are at correct positions) and 1 cow (there is a "3", but at a different index). 
+
 * Note that what is counted as a bull does not increment the cow counter
-* Promise not to use your skills to guess PIN numbers! :) 
+* You need to be clever to guess the number in **10** steps
+* Promise not to use your skills to crack PIN numbers! :) 
