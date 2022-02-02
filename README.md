@@ -15,3 +15,7 @@ If the true number is 9543 and your guess is 9532, you have got 2 bulls (9 and 5
 * Note that what is counted as a bull does not increment the cow counter
 * You need to be clever to guess the number in **10** steps
 * Promise not to use your skills to crack PIN numbers! :) 
+
+## How to run? 
+
+Just do `python main.py` and enjoy your unforgettable CLI experience :) 
