@@ -6,8 +6,8 @@ The rules are very straightforward:
 
 * You are supposed to guess a number (technically speaking, it can start with 0 so it might not be a number) that consists of 4 unique digits
 * Each round your guess is checked against the true number that was generated randomly
-* If you guess both the digits and its position, this is counted as a bull
-* If the true number includes the digit, but the position is different, it is a cow
+* If you guess both the digit and its position, this is counted as a bull
+* If the true number includes the digit, but the position is wrong, it is a cow
 
 **Example**
 If the true number is 9543 and your guess is 9532, you have got 2 bulls (9 and 5 are at correct positions) and 1 cow (there is a "3", but at a different index). 
